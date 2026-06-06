@@ -244,17 +244,17 @@ Comparison against expert clinicians (n=2,994 annotations across 350 images):
 </tr>
 <tr>
 <td><img src="assets/results/best1_gt.png" width="220"/></td>
-<td><img src="assets/results/best1_HiTAD.png" width="220"/></td>
+<td><img src="assets/results/best1_hitad.png" width="220"/></td>
 <td><img src="assets/results/best1_baseline.png" width="220"/></td>
 </tr>
 <tr>
 <td><img src="assets/results/best2_gt.png" width="220"/></td>
-<td><img src="assets/results/best2_HiTAD.png" width="220"/></td>
+<td><img src="assets/results/best2_hitad.png" width="220"/></td>
 <td><img src="assets/results/best2_baseline.png" width="220"/></td>
 </tr>
 <tr>
 <td><img src="assets/results/best3_gt.png" width="220"/></td>
-<td><img src="assets/results/best3_HiTAD.png" width="220"/></td>
+<td><img src="assets/results/best3_hitad.png" width="220"/></td>
 <td><img src="assets/results/best3_baseline.png" width="220"/></td>
 </tr>
 </table>
@@ -266,11 +266,11 @@ Comparison against expert clinicians (n=2,994 annotations across 350 images):
 <div align="center">
 <table>
 <tr>
-<td align="center"><img src="assets/heatmaps/HiTAD_ldb.png" width="145"/><br/><sub>HiTAD — LDB</sub></td>
-<td align="center"><img src="assets/heatmaps/HiTAD_ss.png" width="145"/><br/><sub>HiTAD — SS</sub></td>
-<td align="center"><img src="assets/heatmaps/HiTAD_sp.png" width="145"/><br/><sub>HiTAD — SP</sub></td>
-<td align="center"><img src="assets/heatmaps/HiTAD_ddd.png" width="145"/><br/><sub>HiTAD — DDD</sub></td>
-<td align="center"><img src="assets/heatmaps/HiTAD_all.png" width="145"/><br/><sub>HiTAD — ALL</sub></td>
+<td align="center"><img src="assets/heatmaps/hitad_ldb.png" width="145"/><br/><sub>HiTAD — LDB</sub></td>
+<td align="center"><img src="assets/heatmaps/hitad_ss.png" width="145"/><br/><sub>HiTAD — SS</sub></td>
+<td align="center"><img src="assets/heatmaps/hitad_sp.png" width="145"/><br/><sub>HiTAD — SP</sub></td>
+<td align="center"><img src="assets/heatmaps/hitad_ddd.png" width="145"/><br/><sub>HiTAD — DDD</sub></td>
+<td align="center"><img src="assets/heatmaps/hitad_all.png" width="145"/><br/><sub>HiTAD — ALL</sub></td>
 </tr>
 <tr>
 <td align="center"><img src="assets/heatmaps/rtdetr_ldb.png" width="145"/><br/><sub>RT-DETR — LDB</sub></td>
