@@ -324,11 +324,11 @@ As a post-detection step, HiTAD performs automated **Meyerding severity grading*
 ## Repository Structure
 
 ```
-HiTAD/                     Core library
+hitad/                         Core library
 ├── models/
-│   ├── HiTAD.py           V1: Single-stage with AreaAttention + DFL head
-│   ├── HiTAD_v2.py        V2: Two-stage (DDE + MLDR) with RoI refinement
-│   └── HiTAD_v33.py       V3.3: DenseC2f + adaptive LayerNorm + AreaAttention
+│   ├── hitad.py               V1: Single-stage with AreaAttention + DFL head
+│   ├── hitad_v2.py            V2: Two-stage (DDE + MLDR) with RoI refinement
+│   └── hitad_v33.py           V3.3: DenseC2f + adaptive LayerNorm + AreaAttention
 ├── data/
 │   └── dataset.py             SpinalMRIDataset with Meyerding grading support
 ├── losses/
@@ -372,9 +372,9 @@ configs/                       YAML dataset configurations
 ├── data_disorders.yaml        6-class disorder detection
 └── data_pfirrmann.yaml        13-class (anatomy + disorders)
 
-assets/                        Figures and visualizations
+assets/                        Figures used in this README
+docs/                          Graphical abstract
 tests/                         Unit tests
-docs/                          Architecture diagrams (PDF)
 ```
 
 ---
@@ -396,7 +396,7 @@ cd HiTAD
 
 # Create environment
 conda env create -f environment.yml
-conda activate YS
+conda activate HiTAD
 
 # Install HiTAD as editable package
 pip install -e .
@@ -538,7 +538,7 @@ python external_validation/evaluate.py \
 ### Explainability (GradCAM / LayerCAM)
 
 ```python
-from HiTAD.models import HiTADV33
+from hitad.models import HiTADV33
 from external_validation.gradcam import GradCAM, visualize_gradcam
 import torch
 
@@ -566,7 +566,7 @@ results = evaluator.evaluate_robustness_suite(image_bgr)
 ### Meyerding Grading (Post-Detection)
 
 ```python
-from HiTAD.utils.pfirrmann import get_pfirrmann_grade
+from hitad.utils.pfirrmann import get_pfirrmann_grade
 # Automated severity grading via HOG + Random Forest
 # Applied to detected SP bounding boxes
 ```
@@ -575,21 +575,9 @@ from HiTAD.utils.pfirrmann import get_pfirrmann_grade
 
 ## Demo Application
 
-An interactive **Streamlit** dashboard (`app/`) is included for clinical
-inference, GradCAM-based interpretability, robustness evaluation, batch
-processing, and research analytics — all without writing code.
+The interactive application for HiTAD and the comparison models is maintained as a separate repository, **SDD: Spine Disorder Detective**: https://github.com/farhatmasood/SDD-Spine-Disorder-Detective
 
-```bash
-# Install app-specific dependencies
-pip install -r app/requirements.txt
-
-# Launch the dashboard
-streamlit run app/app.py
-```
-
-Place trained weights (`.pt` / `.pth`) in `app/weights/` and optional
-per-model metrics CSVs in `app/metrics/`.  See [`app/README.md`](app/README.md)
-for supported architectures, environment variables, and full usage details.
+It provides single-image inference, GradCAM attention maps, robustness testing under simulated MRI degradations, batch processing and training-curve plots, and ships with the trained checkpoints and sample mid-sagittal slices.
 
 ---
 

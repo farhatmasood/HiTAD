@@ -1,4 +1,4 @@
-name: YS
+name: HiTAD
 channels:
   - pytorch
   - nvidia

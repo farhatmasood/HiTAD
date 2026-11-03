@@ -70,12 +70,3 @@ training_output*.log
 *.h5
 *.hdf5
 rf-detr-*.pth
-
-# Streamlit app runtime
-app/weights/*.pt
-app/weights/*.pth
-app/weights/*.onnx
-app/weights/*.engine
-app/runs/
-app/__pycache__/
-app/utils/__pycache__/
