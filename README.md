@@ -575,7 +575,7 @@ from hitad.utils.pfirrmann import get_pfirrmann_grade
 
 ## Demo Application
 
-The interactive application for HiTAD and the comparison models is maintained as a separate repository, **SDD: Spine Disorder Detective**: https://github.com/farhatmasood/SDD-Spine-Disorder-Detective
+The interactive application for HiTAD and the comparison models is maintained as a separate repository, **SDD: Spine Disorder Detective**: https://github.com/farhatmasood/SDD
 
 It provides single-image inference, GradCAM attention maps, robustness testing under simulated MRI degradations, batch processing and training-curve plots, and ships with the trained checkpoints and sample mid-sagittal slices.
 
