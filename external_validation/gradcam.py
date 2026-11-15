@@ -1,8 +1,7 @@
 """
 GradCAM Interpretability Module
 ================================
-Gradient-weighted Class Activation Mapping for HiTAD models.
-Provides visual explanations of model predictions for clinical validation.
+Gradient-weighted Class Activation Mapping for HiTAD.
 
 References:
     Selvaraju et al. "Grad-CAM: Visual Explanations from Deep Networks
