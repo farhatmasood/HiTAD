@@ -1,6 +1,4 @@
 """
-Evaluate a trained model on an external dataset.
-
 Computes per-class and aggregate detection metrics (mAP@50, mAP@50-95,
 Precision, Recall) on an out-of-distribution dataset to assess
 generalisability.
